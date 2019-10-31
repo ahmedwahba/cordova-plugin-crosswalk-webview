@@ -1,6 +1,7 @@
 # cordova-plugin-crosswalk-webview
 
-Makes your Cordova application use the [Crosswalk WebView](https://crosswalk-project.org/)
+* *This fork to generate both ARM & X86 in one package*
+* Makes your Cordova application use the [Crosswalk WebView](https://crosswalk-project.org/)
 instead of the System WebView. Requires cordova-android 4.0 or greater.
 
 ### Benefits
@@ -28,6 +29,12 @@ The following directions are for cordova-cli (most people).  Alternatively you c
 
 ```
 $ cordova plugin add cordova-plugin-crosswalk-webview
+```
+
+* To use this fork 
+
+```
+$ cordova plugin add https://github.com/ahmedwahba/cordova-plugin-crosswalk-webview
 ```
 
 * Build
