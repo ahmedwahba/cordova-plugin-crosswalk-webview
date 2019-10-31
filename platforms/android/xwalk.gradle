@@ -114,20 +114,27 @@ cdvPluginPostBuildExtras.add({
     }
 
     android {
+        flavorDimensions "default"
+        
+        defaultConfig {
+            ndk {
+                abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+            }
+        }
         if (xwalk64bit != null) {
             productFlavors {
                 x86_64 {
                     versionCode defaultConfig.versionCode + 6
                     ndk {
-                       abiFilters "x86_64", ""
+                       abiFilters "x86_64", "x86", "arm64-v8a", "armeabi-v7a"
                     }
                 }
-                arm64 {
-                    versionCode defaultConfig.versionCode + 9
-                    ndk {
-                        abiFilters "arm64-v8a", ""
-                    }
-                }
+                // arm64 {
+                //     versionCode defaultConfig.versionCode + 9
+                //     ndk {
+                //         abiFilters "arm64-v8a", ""
+                //     }
+                // }
             }
         }
     }
